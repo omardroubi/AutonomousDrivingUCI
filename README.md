@@ -1,2 +1,3 @@
 # AutonomousDrivingUCI
-Autonomous Driving Project at the Center for Embedded and Cyber-physical Systems at UC Irvine
+Autonomous Driving Project for the Center of Embedded and Cyber-physical Systems at UC Irvine
+
