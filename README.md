@@ -50,6 +50,39 @@ This approach works but slow and not efficient.
 
 => A better approach was invented in 2015, **RCNNs**.
 
-### Regions with Convolutional Neural Networks (Deep RCNNs) (2015)
+### Regions with Convolutional Neural Networks (Deep RCNNs) (2014)
 RCNN creates bounding boxes, or regional proposals, using a process called **Selective Search**
 At a higher level, Selective search looks at the image through windows of different sizes (randomly sized and placed windows at first), and then, for each size it tries to group together adjacent pixels by texture, color, or intensity to identify objects.
+1) *Input* Image
+2) Extract *Regions* Proposals using a specific treshold
+3) Run the images in those boxes through a pretrained *CNN* like Inception or ResNet
+4) *SVM* will classify and detect what image in the box is
+5) Run the box through a *linear regression* model to output tighter coordinates for the box once the object has been classified.
+
+**Improvements to RCNN**: 
+- RCNN (paper 1)
+- Fast RCNN (paper 2)
+- Mask RCNN (paper 3)
+- **YOLO**, outperformed all the other RCNNs
+
+### YOLOv3 (You Only Look Once) (2014+)
+by Ross Girshick (**Facebook AI Research**), Santosh Divvala (**Allen Institute for Artificial Intelligence**), Joseph Redmon (**University of Washington**), Ali Farhadi (**University of Washington**)
+
+**(https://medium.com/@jonathan_hui/real-time-object-detection-with-yolo-yolov2-28b1b93e2088)**
+
+
+YOLO takes a different approach.
+YOLO looks at the image once, hence its name, but in a clever way.
+YOLO was trained on PASCAL VOC dataset which detects: cars, cats, dogd, persons, bycicles, boats, buses, traffic signs, ...
+
+1) YOLO divides the image into a grid of 13x13 cells.
+2) Each of these cells is responsible of predicting **5 bounding boxes**.
+Bounding box = rectangle that encloses an object.
+3) YOLO will output a confidence score that tells us how certain it is that the predicted box encloses an object.
+(according to texture, color, patterns, intensity of pixels)
+4) The higher this confidence score, the fatter the box is drawn. The confidence score doesn't say anything about  what kind of object is in the box, just if the shape of the box is good.
+5) Each bounding box has a **1) confidence score of box existance** and **2) class (CNN)**.
+6) The confidence score for the bounding box and the class prediction are combined into one final score that tells us the probability that this bounding box contains a specific type of object.
+***Example***: 85% sure that the box contains *dog* => Based on a treshold that we decide, we can decide to leave or remove this bounding box.
+7) Since 13x13x5=845 bounding boxes
+=> most of these boxes have very low confidence scores, so we only keep the boxes whose final score is 30% or more (if threshold chosen is 0.3).
