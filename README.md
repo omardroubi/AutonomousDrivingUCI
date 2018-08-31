@@ -88,6 +88,28 @@ Bounding box = rectangle that encloses an object.
 => most of these boxes have very low confidence scores, so we only keep the boxes whose final score is 30% or more (if threshold chosen is 0.3).
 
 ## Installation
+Currently, YOLO is available in C but there's also a translation to Python using TensorFlow. 
+You can choose to install the C version or the Python version on your computer.
+
+#### C Version
+https://pjreddie.com/darknet/yolo/
+
+Download & Install
+```sh
+git clone https://github.com/pjreddie/darknet
+cd darknet
+make
+```
+
+Get the weights
+```sh
+wget https://pjreddie.com/media/files/yolov3.weights
+```
+
+Run the algorithm
+```sh
+./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+```
 
 ### Dependencies
 
