@@ -86,3 +86,11 @@ Bounding box = rectangle that encloses an object.
 ***Example***: 85% sure that the box contains *dog* => Based on a treshold that we decide, we can decide to leave or remove this bounding box.
 7) Since 13x13x5=845 bounding boxes
 => most of these boxes have very low confidence scores, so we only keep the boxes whose final score is 30% or more (if threshold chosen is 0.3).
+
+## Installation
+
+### Dependencies
+
+### Installation & Run Commands
+
+## gem5
