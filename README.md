@@ -1,5 +1,5 @@
 # Autonomous Driving Project - University of California, Irvine
-Autonomous Driving Project for the Center of Embedded and Cyber-physical Systems
+> Autonomous Driving Project for the Center of Embedded and Cyber-physical Systems
 
 ![editedbanner](https://user-images.githubusercontent.com/20921475/42423185-27f6d328-82ab-11e8-9ce7-c45ada4244ec.png)
 
@@ -9,7 +9,7 @@ Implement a CNN for Pedestian Detection on multiple cores inside embedded system
 ## Object Detection History
 
 ### Viola-Jones Algorithm (2001)
-Efficient Algorithm for face detection
+Efficient Algorithm for face detection.
 First time facial detection with webcam
 = SVM trained on a dataset of faces
 
