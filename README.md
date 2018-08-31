@@ -101,7 +101,7 @@ cd darknet
 make
 ```
 
-Get the weights
+Get the weights (You can choose to install smaller sized weights if you want like tiny-yolov3)
 ```sh
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
@@ -111,8 +111,18 @@ Run the algorithm
 ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 ```
 
+You can set the treshold if you want (0=show all the bounding boxes, 1=show only 100% accurate (which is almost never the case))
+```sh
+- treshold 0
+```
+
+Run the algorithm on a video
+```sh
+./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights <video file>
+```
+
 ### Dependencies
 
-### Installation & Run Commands
+### Training
 
 ## gem5
