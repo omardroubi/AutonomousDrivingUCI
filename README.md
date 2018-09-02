@@ -121,6 +121,14 @@ Run the algorithm on a video
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights <video file>
 ```
 
+#### Python Version
+https://github.com/thtrieu/darkflow
+
+If you get some errors while installing dependencies, you can also follow this tutorial
+https://keponk.wordpress.com/2017/12/07/siraj-darkflow/
+
+
+
 ### Dependencies
 
 ### Training
