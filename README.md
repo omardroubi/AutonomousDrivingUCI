@@ -67,6 +67,8 @@ At a higher level, Selective search looks at the image through windows of differ
 - Mask RCNN (paper 3)
 - **YOLO**, outperformed all the other RCNNs
 
+Also see Detectron RCNN by Facebook AI: https://github.com/facebookresearch/Detectron
+
 ### YOLOv3 (You Only Look Once) (2014+)
 by Ross Girshick (**Facebook AI Research**), Santosh Divvala (**Allen Institute for Artificial Intelligence**), Joseph Redmon (**University of Washington**), Ali Farhadi (**University of Washington**)
 
