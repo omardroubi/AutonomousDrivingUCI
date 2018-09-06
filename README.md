@@ -51,6 +51,8 @@ This approach works but slow and not efficient.
 => A better approach was invented in 2015, **RCNNs**.
 
 ### Regions with Convolutional Neural Networks (Deep RCNNs) (2014)
+https://towardsdatascience.com/building-a-custom-mask-rcnn-model-with-tensorflow-object-detection-952f5b0c7ab4
+
 RCNN creates bounding boxes, or regional proposals, using a process called **Selective Search**
 At a higher level, Selective search looks at the image through windows of different sizes (randomly sized and placed windows at first), and then, for each size it tries to group together adjacent pixels by texture, color, or intensity to identify objects.
 1) *Input* Image
