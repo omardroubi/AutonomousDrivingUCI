@@ -91,6 +91,8 @@ Bounding box = rectangle that encloses an object.
 7) Since 13x13x5=845 bounding boxes
 => most of these boxes have very low confidence scores, so we only keep the boxes whose final score is 30% or more (if threshold chosen is 0.3).
 
+https://medium.com/@jonathan_hui/object-detection-speed-and-accuracy-comparison-faster-r-cnn-r-fcn-ssd-and-yolo-5425656ae359
+
 ## Installation
 Currently, YOLO is available in C but there's also a translation to Python using TensorFlow. 
 You can choose to install the C version or the Python version on your computer.
